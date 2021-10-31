@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/https;//Toby-Codes.github.io/choice-maker-app/static/css/main.69a998e5.chunk.css",
+    "main.js": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/main.dab7c77b.chunk.js",
+    "main.js.map": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/main.dab7c77b.chunk.js.map",
+    "runtime-main.js": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/runtime-main.8dfc44b4.js",
+    "runtime-main.js.map": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/runtime-main.8dfc44b4.js.map",
+    "static/js/2.242bb00a.chunk.js": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/2.242bb00a.chunk.js",
+    "static/js/2.242bb00a.chunk.js.map": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/2.242bb00a.chunk.js.map",
+    "static/js/3.3962d30a.chunk.js": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/3.3962d30a.chunk.js",
+    "static/js/3.3962d30a.chunk.js.map": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/3.3962d30a.chunk.js.map",
+    "index.html": "/https;//Toby-Codes.github.io/choice-maker-app/index.html",
+    "static/css/main.69a998e5.chunk.css.map": "/https;//Toby-Codes.github.io/choice-maker-app/static/css/main.69a998e5.chunk.css.map",
+    "static/js/2.242bb00a.chunk.js.LICENSE.txt": "/https;//Toby-Codes.github.io/choice-maker-app/static/js/2.242bb00a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8dfc44b4.js",
+    "static/js/2.242bb00a.chunk.js",
+    "static/css/main.69a998e5.chunk.css",
+    "static/js/main.dab7c77b.chunk.js"
+  ]
+}
