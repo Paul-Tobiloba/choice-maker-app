@@ -35,7 +35,7 @@ function MainContent({
                 </p>
             </div>
             <div className="mt-5 md:mt-0 md:col-span-2">
-                <form>
+                <div>
                     <label
                         className="block text-left text-gray-700 text-lg font-bold mb-2"
                         htmlFor="question"
@@ -71,7 +71,7 @@ function MainContent({
                             disabled={getDisabled()}
                         />
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     );

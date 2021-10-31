@@ -6,7 +6,7 @@ import "./App.css";
 import Result from "./components/Result";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [question, setQuestion] = useState("");
   const [options, setOptions] = useState([
     {
@@ -45,39 +45,22 @@ function App() {
     ]);
   };
   const randomAnswer = () => {
-    let random = Math.floor(Math.random() * options.length);
-    options[random].isCorrect = true;
-    setOptions([...options]);
+    let prevOptions = options.map((option) => {
+      return { ...option, isCorrect: false };
+    });
+    let random = Math.floor(Math.random() * prevOptions.length);
+    prevOptions[random].isCorrect = true;
+    setOptions(prevOptions);
+    setDisplayData({ question, options: prevOptions });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     setShowResult(true);
-    setDisplayData({ question, options });
-    setQuestion("");
     randomAnswer();
-    setOptions([
-      {
-        id: 1,
-        text: "",
-        isCorrect: false,
-      },
-      {
-        id: 2,
-        text: "",
-        isCorrect: false,
-      },
-      {
-        id: 3,
-        text: "",
-        isCorrect: false,
-      },
-      {
-        id: 4,
-        text: "",
-        isCorrect: false,
-      },
-    ]);
+
+    setQuestion("");
+
   };
 
   const handleQuestionChange = (e) => {
@@ -114,14 +97,38 @@ function App() {
       {showResult && (
         <Result
           displayData={displayData}
+          count={count}
           resetDisplayData={() => {
             setDisplayData({});
+            setCount(1);
             setShowResult(false);
+            setOptions([
+              {
+                id: 1,
+                text: "",
+                isCorrect: false,
+              },
+              {
+                id: 2,
+                text: "",
+                isCorrect: false,
+              },
+              {
+                id: 3,
+                text: "",
+                isCorrect: false,
+              },
+              {
+                id: 4,
+                text: "",
+                isCorrect: false,
+              },
+            ]);
           }}
           randomNumber={() => {
             randomAnswer();
             setCount(count + 1);
-
+            console.log(count);
           }}
         />
       )}
