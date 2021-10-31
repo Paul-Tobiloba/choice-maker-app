@@ -45,13 +45,18 @@ function App() {
       },
     ]);
   };
+  const randomAnswer = () => {
+    let random = Math.floor(Math.random() * options.length);
+    options[random].isCorrect = true;
+    setOptions([...options]);
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
     setShowResult(true);
     setDisplayData({ question, options });
-    setCount(count + 1);
     setQuestion("");
+    randomAnswer();
     setOptions([
       {
         id: 1,
@@ -119,11 +124,11 @@ function App() {
             const randomOption = options[randomIndex];
             randomOption.isCorrect = true;
             setOptions(options);
-            
+            setCount(count + 1);
           }}
         />
       )}
-      <p>Count: {count}</p>
+
     </div>
   );
 }

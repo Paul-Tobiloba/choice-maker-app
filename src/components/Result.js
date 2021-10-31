@@ -17,7 +17,7 @@ export default function Result({ count, displayData, resetDisplayData, randomAns
                 <Button type="button" text="Ask Again" onClick={randomAnswer} />
                 <Button type="button" text="Reset" onClick={resetDisplayData} />
             </div>
-
+            <p className="block text-left text-gray-700 text-lg font-bold mb-2">Count: {count}</p>
         </div>
     );
 }
