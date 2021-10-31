@@ -104,14 +104,14 @@ function App() {
   return (
     <div className="App h-full">
       <Header className="" />
-      <MainContent
+      {!showResult && (<MainContent
         question={question}
         options={options}
         handleQuestionChange={handleQuestionChange}
         handleOptionChange={handleOptionChange}
         onSubmit={onSubmit}
         addOption={addOption}
-      />
+      />)}
       {showResult && (
         <Result
           displayData={displayData}
