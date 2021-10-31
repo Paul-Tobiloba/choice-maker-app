@@ -6,7 +6,6 @@ import "./App.css";
 import Result from "./components/Result";
 
 function App() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [count, setCount] = useState(0);
   const [question, setQuestion] = useState("");
   const [options, setOptions] = useState([
@@ -119,12 +118,10 @@ function App() {
             setDisplayData({});
             setShowResult(false);
           }}
-          randomAnswer={() => {
-            const randomIndex = Math.floor(Math.random() * options.length);
-            const randomOption = options[randomIndex];
-            randomOption.isCorrect = true;
-            setOptions(options);
+          randomNumber={() => {
+            randomAnswer();
             setCount(count + 1);
+
           }}
         />
       )}

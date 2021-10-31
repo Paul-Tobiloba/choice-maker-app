@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import Options from "./Options";
 import Button from "./Button";
 
@@ -16,7 +15,7 @@ function MainContent({
     };
 
     const getDisabled = () => {
-        const empty = options.filter((option) => option.text == "");
+        const empty = options.filter((option) => option.text === "");
 
         if (empty.length || !question) {
             return true;

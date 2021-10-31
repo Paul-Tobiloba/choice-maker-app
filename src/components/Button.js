@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Button({ type, text, onClick, disabled }) {
-    const [count, setCount] = useState(0);
+
     return (
         <button
             onClick={onClick}
