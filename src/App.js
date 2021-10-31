@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+
 import './App.css';
 
 function App() {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App h-full">
+      <Header className="" />
+      <MainContent className="md:grid md:grid-cols-3 md:gap-6" />
     </div>
   );
 }
